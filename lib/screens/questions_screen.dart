@@ -25,28 +25,28 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ),
           ),
           SizedBox(
-            height: 30,
+            height: 22,
           ),
           AnswerButton(
             answerText: 'Oi',
           ),
-          Padding(
-            padding: EdgeInsets.all(4.0),
-            child: AnswerButton(
-              answerText: 'Oi',
-            ),
+          SizedBox(
+            height: 08,
           ),
-          Padding(
-            padding: EdgeInsets.all(4.0),
-            child: AnswerButton(
-              answerText: 'Oi',
-            ),
+          AnswerButton(
+            answerText: 'Oi',
           ),
-          Padding(
-            padding: EdgeInsets.all(4.0),
-            child: AnswerButton(
-              answerText: 'Oi',
-            ),
+          SizedBox(
+            height: 08,
+          ),
+          AnswerButton(
+            answerText: 'Oi',
+          ),
+          SizedBox(
+            height: 08,
+          ),
+          AnswerButton(
+            answerText: 'Oi',
           ),
         ],
       ),
