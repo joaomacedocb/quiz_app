@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/answer_button.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key});
@@ -12,53 +13,39 @@ class QuestionScreen extends StatefulWidget {
 class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(context) {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
+          Text(
             'Esta é uma pergunta de teste',
             style: TextStyle(
               color: Colors.white,
               fontSize: 22,
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 30,
           ),
+          AnswerButton(
+            answerText: 'Oi',
+          ),
           Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer 1.'),
+            padding: EdgeInsets.all(4.0),
+            child: AnswerButton(
+              answerText: 'Oi',
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer 1.'),
+            padding: EdgeInsets.all(4.0),
+            child: AnswerButton(
+              answerText: 'Oi',
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer 1.'),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer 1.'),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Text('Answer 1.'),
+            padding: EdgeInsets.all(4.0),
+            child: AnswerButton(
+              answerText: 'Oi',
             ),
           ),
         ],
