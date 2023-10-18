@@ -16,11 +16,13 @@ class _QuestionScreenState extends State<QuestionScreen> {
   Widget build(context) {
     final currentQuestion = questions[0];
 
-
     return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          const SizedBox(
+            height: 150,
+          ),
           Text(
             currentQuestion.text,
             style: const TextStyle(
@@ -31,30 +33,13 @@ class _QuestionScreenState extends State<QuestionScreen> {
           const SizedBox(
             height: 22,
           ),
-          AnswerButton(
-            answerText: currentQuestion.answers[0],
-            onTap: () {},
+          ...currentQuestion.answers.map((answer) {
+            return (AnswerButton(
+              answerText: answer, onTap: () {}));
+            }
           ),
           const SizedBox(
-            height: 08,
-          ),
-          AnswerButton(
-            answerText: currentQuestion.answers[1],
-            onTap: () {},
-          ),
-          const SizedBox(
-            height: 08,
-          ),
-          AnswerButton(
-            answerText: currentQuestion.answers[2],
-            onTap: () {},
-          ),
-          const SizedBox(
-            height: 08,
-          ),
-          AnswerButton(
-            answerText: currentQuestion.answers[3],
-            onTap: () {},
+            height: 150,
           ),
         ],
       ),
