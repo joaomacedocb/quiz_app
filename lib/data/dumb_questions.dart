@@ -2,8 +2,9 @@ import 'package:quiz_app/models/quiz_questions.dart';
 
 const questions = [
   QuizQuestions(
-    'Qual é o seu nome?',
-    ['João', 'Ana', 'Pedro', 'Alan'],
+    'What is a widget in Flutter?',
+    ['A programming language',
+    'An Agile methodology', 'Pedro', 'Alan'],
   ),
   QuizQuestions(
     'Em qual ano nós estamos?',

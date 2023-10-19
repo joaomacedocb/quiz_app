@@ -17,31 +17,30 @@ class _QuestionScreenState extends State<QuestionScreen> {
     final currentQuestion = questions[0];
 
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          const SizedBox(
-            height: 150,
-          ),
-          Text(
-            currentQuestion.text,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 22,
+      child: Container(
+        margin: const EdgeInsets.only(left: 20, right: 20, top: 120, bottom: 120,),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              currentQuestion.text,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+              ),
+              textAlign: TextAlign.center,
             ),
-          ),
-          const SizedBox(
-            height: 22,
-          ),
-          ...currentQuestion.answers.map((answer) {
-            return (AnswerButton(
-              answerText: answer, onTap: () {}));
-            }
-          ),
-          const SizedBox(
-            height: 150,
-          ),
-        ],
+            const SizedBox(
+              height: 22,
+            ),
+            ...currentQuestion.answers.map((answer) {
+              return (AnswerButton(
+                answerText: answer, onTap: () {print('Hello!');}));
+              }
+            ),
+          ],
+        ),
       ),
     );
   }
