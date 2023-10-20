@@ -1,16 +1,9 @@
 # quiz_app
 
-A new Flutter project.
+Este projeto visa montar uma estrutura de Quiz para que possa ser utilizada posteriormente para atividades de campanha ou até recreativa envolvendo este tipo de dinâmica.
 
-## Getting Started
+## Desenvolvimeto
 
-This project is a starting point for a Flutter application.
+Este projeto está sendo desenvolvido durante as aulas do professor Maximilian Schwarzmüller, seguindo de forma bem fiel as orientações, mas também adicionando algumas visões minhas de como poderia organizar e escrever o código.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
