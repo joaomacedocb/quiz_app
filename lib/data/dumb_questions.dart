@@ -4,7 +4,9 @@ const questions = [
   QuizQuestions(
     'What is a widget in Flutter?',
     ['A programming language',
-    'An Agile methodology', 'Pedro', 'Alan'],
+    'An Agile methodology',
+    'Its the central class in Flutter',
+    'An update method'],
   ),
   QuizQuestions(
     'Em qual ano nós estamos?',
