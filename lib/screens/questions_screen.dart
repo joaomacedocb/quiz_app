@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/answer_button.dart';
 import 'package:quiz_app/data/dumb_questions.dart';
 
@@ -22,7 +23,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
 
   @override
   Widget build(context) {
-    final currentQuestion = questions[0];
+    final currentQuestion = questions[currentQuestionIndex];
 
     return Center(
       child: Container(
@@ -38,11 +39,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
           children: [
             Text(
               currentQuestion.text,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-              ),
               textAlign: TextAlign.center,
+              style: GoogleFonts.montserrat(
+                color: Colors.white, fontSize: 24, fontWeight: FontWeight.w400, 
+              ),
             ),
             const SizedBox(
               height: 22,
