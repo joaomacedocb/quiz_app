@@ -44,7 +44,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
               currentQuestion.text,
               textAlign: TextAlign.center,
               style: GoogleFonts.montserrat(
-                color: Colors.white, fontSize: 24, fontWeight: FontWeight.w400, 
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.w400,
               ),
             ),
             const SizedBox(
@@ -52,12 +54,11 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ),
             ...currentQuestion.getShuffledAnswers().map((answer) {
               return (AnswerButton(
-                  answerText: answer,
-                  onTap: () {
-                    answerQuestion(answer);
-                  },
-                  )
-                );
+                answerText: answer,
+                onTap: () {
+                  answerQuestion(answer);
+                },
+              ));
             }),
           ],
         ),
