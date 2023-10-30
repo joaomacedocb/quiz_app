@@ -7,6 +7,7 @@ class ResultsScreen extends StatelessWidget {
 
   final List<String> chosenAnswers;
 
+
   List<Map<String, Object>> getSummaryData() {
     final List<Map<String, Object>> summary = [];
 
@@ -25,11 +26,17 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final summaryData = getSummaryData();
+    final numTotalQuestions = questions.length;
+    final numCorrectQuestions = summaryData.where((data) {
+      return data['user_answer'] == data['correct_answer'];
+    }).length;
+
     return Center(
       child: Container(
         margin: const EdgeInsets.only(
-          left: 20,
-          right: 20,
+          left: 80,
+          right: 80,
           top: 120,
           bottom: 120,
         ),
@@ -37,20 +44,33 @@ class ResultsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              'You have answred x of y questions correctly.',
+            Text(
+              'You have answered $numCorrectQuestions of $numTotalQuestions questions correctly.',
+              style: const TextStyle(color: Colors.white, fontSize: 22),
               textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 30,
             ),
-            QuestionsSummary(getSummaryData()),
+            QuestionsSummary(summaryData),
             const SizedBox(
               height: 30,
             ),
-            TextButton(
-              onPressed: () {},
-              child: const Text('Restart quiz'),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 39, 0, 107),
+                ),
+              onPressed: () {
+              
+              },
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.update),
+                  Text('Restart quiz'),
+                ],
+              ),
             ),
           ],
         ),

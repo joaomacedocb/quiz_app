@@ -42,6 +42,12 @@ class _QuizState extends State<Quiz> {
     }
   }
 
+  void restartQuiz() {
+    setState(() {
+      activeScreen = 'initial-screen';
+    });
+  }
+
   @override
   Widget build(context) {
     Widget screenWidget = InitialScreen(switchScreen);
