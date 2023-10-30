@@ -2,15 +2,18 @@ import 'package:quiz_app/models/quiz_questions.dart';
 
 const questions = [
   QuizQuestions(
-    'What is a widget in Flutter?',
-    ['A programming language',
+    'What is Flutter?',
+    ['A framework which works with Dart',
     'An Agile methodology',
-    'Its the central class in Flutter',
+    'A programming language',
     'An update method'],
   ),
   QuizQuestions(
-    'Em qual ano nós estamos?',
-    ['2010', '2011', '2018', '2023'],
+    'Qual é a principal característica do Flutter?',
+    ['Cria apps para várias plataformas por um código fonte',
+    'Faz telas bonitas',
+    'É difícil de entender e não indicado para iniciantes',
+    'Pode usar vários tipos de ícones'],
   ),
   QuizQuestions(
     'Qual é a melhor banda de rock?',
