@@ -3,8 +3,9 @@ import 'package:quiz_app/data/dumb_questions.dart';
 import 'package:quiz_app/screens/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.chosenAnswers});
+  const ResultsScreen({super.key, required this.chosenAnswers, required this.onRestart});
 
+  final void Function() onRestart;
   final List<String> chosenAnswers;
 
 
@@ -61,9 +62,7 @@ class ResultsScreen extends StatelessWidget {
                 foregroundColor: Colors.white,
                 backgroundColor: const Color.fromARGB(255, 39, 0, 107),
                 ),
-              onPressed: () {
-              
-              },
+              onPressed: onRestart,
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

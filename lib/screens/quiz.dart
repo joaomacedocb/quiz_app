@@ -26,6 +26,13 @@ class _QuizState extends State<Quiz> {
   List<String> selectedAnswers = [];
   dynamic activeScreen = 'initial-screen';
 
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = 'initial-screen';
+    });
+  }
+
   void switchScreen() {
     setState(() {
       activeScreen = 'question-screen';
@@ -51,7 +58,11 @@ class _QuizState extends State<Quiz> {
     }
 
     if (activeScreen == 'result-screen') {
-      screenWidget = ResultsScreen(chosenAnswers: selectedAnswers,);
+      screenWidget = ResultsScreen(
+        chosenAnswers: selectedAnswers,
+        onRestart: restartQuiz,
+        
+      );
     }
 
     return MaterialApp(
