@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/data/dumb_questions.dart';
+import 'package:quiz_app/data/dummy_questions.dart';
 import 'package:quiz_app/screens/initial_screen.dart';
 import 'package:quiz_app/screens/questions_screen.dart';
 import 'result_screen.dart';
@@ -70,14 +70,15 @@ class _QuizState extends State<Quiz> {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: false,
+        fontFamily: 'Dosis',
       ),
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color.fromARGB(255, 39, 0, 107),
-                Color.fromARGB(255, 77, 48, 128)
+                Color.fromARGB(255, 26, 0, 70),
+                Color.fromARGB(255, 60, 25, 119)
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,

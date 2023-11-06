@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quiz_app/answer_button.dart';
-import 'package:quiz_app/data/dumb_questions.dart';
+import 'package:quiz_app/data/dummy_questions.dart';
 
 class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key, required this.onSelectAnswer});
@@ -43,9 +43,9 @@ class _QuestionScreenState extends State<QuestionScreen> {
             Text(
               currentQuestion.text,
               textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
+              style: GoogleFonts.dosis(
                 color: Colors.white,
-                fontSize: 24,
+                fontSize: 22,
                 fontWeight: FontWeight.w400,
               ),
             ),

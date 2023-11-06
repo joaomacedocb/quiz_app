@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsSummary extends StatelessWidget {
   const QuestionsSummary(this.summaryData, {super.key});
@@ -15,10 +16,9 @@ class QuestionsSummary extends StatelessWidget {
           children: summaryData.map(
             (data) {
               return Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:
-                [
+                children: [
                   Padding(
                     padding: const EdgeInsets.only(right: 14.00),
                     child: Container(
@@ -27,10 +27,16 @@ class QuestionsSummary extends StatelessWidget {
                       alignment: Alignment.center,
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(100.00)),
-                        color: Colors.blue,
+                        color: Colors.yellow,
                       ),
-                      child:
-                          Text(((data['question_index'] as int) + 1).toString()),
+                      child: Text(
+                        ((data['question_index'] as int) + 1).toString(),
+                        style: GoogleFonts.dosis(
+                          fontSize: 14,
+                          color: const Color.fromARGB(255, 18, 2, 59),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                     ),
                   ),
                   Expanded(
@@ -40,8 +46,11 @@ class QuestionsSummary extends StatelessWidget {
                       children: [
                         Text(
                           data['question'] as String,
-                          style: const TextStyle(
-                              color: Colors.white, fontSize: 14),
+                          style: GoogleFonts.dosis(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                         const SizedBox(
                           height: 12,

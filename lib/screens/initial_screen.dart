@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class InitialScreen extends StatelessWidget {
   const InitialScreen(this.startQuiz,{super.key});
@@ -10,23 +11,24 @@ class InitialScreen extends StatelessWidget {
     return Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Image(
               width: 280,
-              color: Color.fromARGB(255, 188, 172, 255),
               image: AssetImage('assets/images/quiz-logo.png'),
             ),
-            const Text(
-              'Learn Flutter with this quiz app!',
-              style: TextStyle(
-                fontSize: 16,
+            Text(
+              'Teste este quiz sobre a nova versão!',
+              style: GoogleFonts.dosis(
                 color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
               ),
-            ),
+              ),
             OutlinedButton.icon(
               style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
               icon: const Icon(Icons.arrow_right_alt),
-              label: const Text('Start quiz'),
+              label: const Text('Começar o quiz'),
               onPressed: startQuiz,
             )
           ],
