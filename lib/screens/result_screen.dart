@@ -39,8 +39,8 @@ class ResultsScreen extends StatelessWidget {
         margin: const EdgeInsets.only(
           left: 40,
           right: 40,
-          top: 100,
-          bottom: 100,
+          top: 80,
+          bottom: 80,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,7 +53,7 @@ class ResultsScreen extends StatelessWidget {
                 fontSize: 22,
                 fontWeight: FontWeight.w400,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.start,
             ),
             const SizedBox(
               height: 30,
