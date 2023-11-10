@@ -27,7 +27,7 @@ const questions = [
     ['QR Linx possui automação no pagamento e carteitas digitais',
     'Somente o nome, o produto é o mesmo',
     'O Pix Fácil é muito mais fácil que o QR Linx',
-    'O QRLinx possui descontos para o clinte que paga no PIX'],
+    'O QRLinx possui descontos para o cliente que paga no PIX'],
   ),
   QuizQuestions(
     'Qual destas funcionalidades foi lançada recentemente no CDI?',

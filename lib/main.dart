@@ -4,4 +4,3 @@ import 'package:quiz_app/screens/quiz.dart';
 void main() {
   runApp(const QuizApp());
 }
-
