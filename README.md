@@ -6,4 +6,6 @@ Este projeto visa montar uma estrutura de Quiz para que possa ser utilizada post
 
 Este projeto está sendo desenvolvido durante as aulas do professor Maximilian Schwarzmüller, seguindo de forma bem fiel as orientações, mas também adicionando algumas visões minhas de como poderia organizar e escrever o código.
 
+O layout foi customizado e utilizei elementos visuais da companhia Seta, onde eu trabalho, colocando algumas perguntas relacionadas ao meu dia a dia.
+
 
