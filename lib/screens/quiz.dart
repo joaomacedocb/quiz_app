@@ -61,7 +61,6 @@ class _QuizState extends State<Quiz> {
       screenWidget = ResultsScreen(
         chosenAnswers: selectedAnswers,
         onRestart: restartQuiz,
-        
       );
     }
 
