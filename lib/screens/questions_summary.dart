@@ -25,9 +25,10 @@ class QuestionsSummary extends StatelessWidget {
                       height: 25,
                       width: 25,
                       alignment: Alignment.center,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(100.00)),
-                        color: Colors.yellow,
+                      // ignore: prefer_const_constructors
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.all(Radius.circular(100.00)),
+                        color: data['correct_answer'] == data['user_answer'] ? Colors.green : Colors.red,
                       ),
                       child: Text(
                         ((data['question_index'] as int) + 1).toString(),
@@ -56,15 +57,39 @@ class QuestionsSummary extends StatelessWidget {
                           height: 12,
                         ),
                         Text(
+                          data['correct_answer'] == data['user_answer'] ? 'Você acertou!' : 'Você errou!',
+                          style: TextStyle(
+                              color: data['correct_answer'] == data['user_answer'] ? Colors.green : Colors.red,
+                              fontSize: 14),
+                        ),
+                        const SizedBox(
+                          height: 12,
+                        ),
+                        const Text(
+                          'Resposta correta:',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 12),
+                        ),
+                        Text(
                           data['correct_answer'] as String,
                           style: const TextStyle(
-                              color: Color.fromARGB(255, 6, 202, 104),
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 12),
+                        ),
+                        const SizedBox(
+                          height: 12,
+                        ),
+                        const Text(
+                          'Sua resposta:',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255),
                               fontSize: 12),
                         ),
                         Text(
                           data['user_answer'] as String,
                           style: const TextStyle(
-                              color: Color.fromARGB(255, 199, 175, 255),
+                              color: Colors.white,
                               fontSize: 12),
                         ),
                         const SizedBox(
