@@ -38,8 +38,8 @@ class ResultsScreen extends StatelessWidget {
         margin: const EdgeInsets.only(
           left: 40,
           right: 40,
-          top: 80,
-          bottom: 80,
+          top: 60,
+          bottom: 30,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
